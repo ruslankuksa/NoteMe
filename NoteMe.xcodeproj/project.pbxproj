@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4475BDBF21C904B600FBFEFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4475BDBE21C904B600FBFEFC /* TableViewCell.swift */; };
+		4475BDC221C9139600FBFEFC /* NotesData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4475BDC021C9139600FBFEFC /* NotesData.xcdatamodeld */; };
+		448AB55521CE806300BCBAB2 /* EditNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448AB55421CE806300BCBAB2 /* EditNoteController.swift */; };
+		44BED3E821CA428400EDB54B /* NewNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BED3E721CA428400EDB54B /* NewNoteController.swift */; };
 		44C6B36221C83FFF001DBCA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C6B36121C83FFF001DBCA5 /* AppDelegate.swift */; };
-		44C6B36421C83FFF001DBCA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C6B36321C83FFF001DBCA5 /* ViewController.swift */; };
+		44C6B36421C83FFF001DBCA5 /* NotesViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C6B36321C83FFF001DBCA5 /* NotesViewContoller.swift */; };
 		44C6B36721C83FFF001DBCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C6B36521C83FFF001DBCA5 /* Main.storyboard */; };
-		44C6B36A21C83FFF001DBCA5 /* NoteMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44C6B36821C83FFF001DBCA5 /* NoteMe.xcdatamodeld */; };
 		44C6B36C21C84000001DBCA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C6B36B21C84000001DBCA5 /* Assets.xcassets */; };
 		44C6B36F21C84000001DBCA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C6B36D21C84000001DBCA5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4475BDBE21C904B600FBFEFC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4475BDC121C9139600FBFEFC /* NotesData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesData.xcdatamodel; sourceTree = "<group>"; };
+		448AB55421CE806300BCBAB2 /* EditNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteController.swift; sourceTree = "<group>"; };
+		44BED3E721CA428400EDB54B /* NewNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteController.swift; sourceTree = "<group>"; };
 		44C6B35E21C83FFF001DBCA5 /* NoteMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C6B36121C83FFF001DBCA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44C6B36321C83FFF001DBCA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44C6B36321C83FFF001DBCA5 /* NotesViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewContoller.swift; sourceTree = "<group>"; };
 		44C6B36621C83FFF001DBCA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		44C6B36921C83FFF001DBCA5 /* NoteMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteMe.xcdatamodel; sourceTree = "<group>"; };
 		44C6B36B21C84000001DBCA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44C6B36E21C84000001DBCA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44C6B37021C84000001DBCA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4475BDB921C9020A00FBFEFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44C6B36321C83FFF001DBCA5 /* NotesViewContoller.swift */,
+				44BED3E721CA428400EDB54B /* NewNoteController.swift */,
+				448AB55421CE806300BCBAB2 /* EditNoteController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4475BDBA21C9024800FBFEFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4475BDBE21C904B600FBFEFC /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4475BDBB21C9025600FBFEFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4475BDC021C9139600FBFEFC /* NotesData.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		44C6B35521C83FFF001DBCA5 = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +89,13 @@
 			isa = PBXGroup;
 			children = (
 				44C6B36121C83FFF001DBCA5 /* AppDelegate.swift */,
-				44C6B36321C83FFF001DBCA5 /* ViewController.swift */,
 				44C6B36521C83FFF001DBCA5 /* Main.storyboard */,
+				4475BDBB21C9025600FBFEFC /* Model */,
+				4475BDBA21C9024800FBFEFC /* View */,
+				4475BDB921C9020A00FBFEFC /* Controller */,
 				44C6B36B21C84000001DBCA5 /* Assets.xcassets */,
 				44C6B36D21C84000001DBCA5 /* LaunchScreen.storyboard */,
 				44C6B37021C84000001DBCA5 /* Info.plist */,
-				44C6B36821C83FFF001DBCA5 /* NoteMe.xcdatamodeld */,
 			);
 			path = NoteMe;
 			sourceTree = "<group>";
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C6B36421C83FFF001DBCA5 /* ViewController.swift in Sources */,
-				44C6B36A21C83FFF001DBCA5 /* NoteMe.xcdatamodeld in Sources */,
+				44BED3E821CA428400EDB54B /* NewNoteController.swift in Sources */,
+				448AB55521CE806300BCBAB2 /* EditNoteController.swift in Sources */,
+				44C6B36421C83FFF001DBCA5 /* NotesViewContoller.swift in Sources */,
+				4475BDBF21C904B600FBFEFC /* TableViewCell.swift in Sources */,
+				4475BDC221C9139600FBFEFC /* NotesData.xcdatamodeld in Sources */,
 				44C6B36221C83FFF001DBCA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,13 +378,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		44C6B36821C83FFF001DBCA5 /* NoteMe.xcdatamodeld */ = {
+		4475BDC021C9139600FBFEFC /* NotesData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				44C6B36921C83FFF001DBCA5 /* NoteMe.xcdatamodel */,
+				4475BDC121C9139600FBFEFC /* NotesData.xcdatamodel */,
 			);
-			currentVersion = 44C6B36921C83FFF001DBCA5 /* NoteMe.xcdatamodel */;
-			path = NoteMe.xcdatamodeld;
+			currentVersion = 4475BDC121C9139600FBFEFC /* NotesData.xcdatamodel */;
+			path = NotesData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
