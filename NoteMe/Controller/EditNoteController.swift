@@ -10,6 +10,7 @@ import UIKit
 
 protocol editNoteDelegate {
     func editNote(title: String, note: String)
+    func deleteNote(title: String, note: String)
 }
 
 class EditNoteController: UIViewController {
@@ -37,4 +38,8 @@ class EditNoteController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func deleteButtonPressed(_ sender: UIBarButtonItem) {
+        delegate?.deleteNote(title: titleText.text, note: noteText.text)
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

@@ -65,6 +65,12 @@ class NotesViewController: UITableViewController, newNoteDelegate, editNoteDeleg
         saveNote()
     }
     
+    func deleteNote(title: String, note: String) {
+        context.delete(notesArray[selectedNoteIndex])
+        notesArray.remove(at: selectedNoteIndex)
+        saveNote()
+    }
+    
     // MARK: - Change view controllers
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "newNote" {
@@ -106,8 +112,5 @@ class NotesViewController: UITableViewController, newNoteDelegate, editNoteDeleg
         tableView.reloadData()
     }
     
-    
-
-
 }
 

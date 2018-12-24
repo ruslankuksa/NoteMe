@@ -121,6 +121,11 @@
                                 <action selector="backButtonPressed:" destination="Nqe-gX-Ej7" id="S3H-hc-Atw"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="v9o-HC-rfd">
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="Nqe-gX-Ej7" id="DsP-3g-PlF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="noteText" destination="iEo-0E-0pB" id="5Ou-EH-Hxf"/>
