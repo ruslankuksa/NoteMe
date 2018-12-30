@@ -13,7 +13,6 @@ class NotesViewController: UITableViewController, newNoteDelegate, editNoteDeleg
     
     var notesArray = [Notes]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var selectedNoteIndex: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +45,6 @@ class NotesViewController: UITableViewController, newNoteDelegate, editNoteDeleg
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToEditNote", sender: self)
-        selectedNoteIndex = indexPath.row
     }
     
     
@@ -60,14 +58,20 @@ class NotesViewController: UITableViewController, newNoteDelegate, editNoteDeleg
     }
     
     func editNote(title: String, note: String) {
-        notesArray[selectedNoteIndex].setValue(title, forKey: "title")
-        notesArray[selectedNoteIndex].setValue(note, forKey: "note")
+        if let indexPath = tableView.indexPathForSelectedRow {
+            notesArray[indexPath.row].setValue(title, forKey: "title")
+            notesArray[indexPath.row].setValue(note, forKey: "note")
+        }
+        
         saveNote()
     }
     
     func deleteNote(title: String, note: String) {
-        context.delete(notesArray[selectedNoteIndex])
-        notesArray.remove(at: selectedNoteIndex)
+        if let indexPath = tableView.indexPathForSelectedRow {
+            context.delete(notesArray[indexPath.row])
+            notesArray.remove(at: indexPath.row)
+        }
+        
         saveNote()
     }
     
