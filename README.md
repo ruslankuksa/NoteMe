@@ -1,1 +1,1 @@
-Simple note app
+Simple app which showing how works CoreData
