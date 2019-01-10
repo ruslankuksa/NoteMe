@@ -18,7 +18,7 @@ class NewNoteController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var noteTextView: UITextView!
     
     var delegate: newNoteDelegate?
-    var noteIsSaved = false
+    //var noteIsSaved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +52,11 @@ class NewNoteController: UIViewController, UITextViewDelegate {
     // MARK: - When back button pressed
     @IBAction func backButtonPressed(_ sender: Any) {
         
-        if noteIsSaved == false && noteTextView.text.count != 0 {
+        if noteTextView.textColor != UIColor.lightGray && titleTextView.textColor != UIColor.lightGray {
             delegate?.userSaveNewNote(title: titleTextView.text, note: noteTextView.text)
-            noteIsSaved = true
         }
         
         navigationController?.popToRootViewController(animated: true)
-        noteIsSaved = false
+
     }
 }

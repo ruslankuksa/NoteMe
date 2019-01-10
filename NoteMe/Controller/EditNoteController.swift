@@ -34,7 +34,12 @@ class EditNoteController: UIViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
-        delegate?.editNote(title: titleText.text, note: noteText.text)
+        if titleText.text == "" && noteText.text == "" {
+            delegate?.deleteNote(title: titleText.text, note: noteText.text)
+        } else {
+           delegate?.editNote(title: titleText.text, note: noteText.text)
+        }
+        
         navigationController?.popToRootViewController(animated: true)
     }
     

@@ -50,20 +50,27 @@ class NotesViewController: UITableViewController, newNoteDelegate, editNoteDeleg
     
     // MARK: - Delegate methods
     func userSaveNewNote(title: String, note: String) {
-        let newNote = Notes(context: context)
-        newNote.title = title
-        newNote.note = note
-        notesArray.append(newNote)
-        saveNote()
+        
+        if title != "" || note != "" {
+            let newNote = Notes(context: context)
+            newNote.title = title
+            newNote.note = note
+            notesArray.append(newNote)
+            saveNote()
+        }
+        
     }
     
     func editNote(title: String, note: String) {
-        if let indexPath = tableView.indexPathForSelectedRow {
-            notesArray[indexPath.row].setValue(title, forKey: "title")
-            notesArray[indexPath.row].setValue(note, forKey: "note")
+        if title != "" || note != "" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                notesArray[indexPath.row].setValue(title, forKey: "title")
+                notesArray[indexPath.row].setValue(note, forKey: "note")
+            }
+            
+            saveNote()
         }
         
-        saveNote()
     }
     
     func deleteNote(title: String, note: String) {
